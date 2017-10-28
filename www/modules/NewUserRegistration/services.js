@@ -8,18 +8,11 @@ Description: Services for NewUserRegistration module
 angular.module('NewUserRegistration')
  
 .factory('UserService',
-    ['$timeout', '$filter', '$http', '$q',
-    function ($timeout, $filter, $http, $q) {
+    ['$timeout', '$filter', '$http', '$q', 'UtilityService',
+    function ($timeout, $filter, $http, $q, UtilityService) {
 
-        //console.log('Inside function UserService newUserRegistration-services.js');
-        
         var service = {};
-		//var BaseAPIUrl = "";
-        //var BaseAPIUrl = "http://localhost:8080";
-        var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
-
-
-
+		var BaseAPIUrl = UtilityService.BaseAPIUrl;
         
         service.GetAll = GetAll;
         service.GetById = GetById;

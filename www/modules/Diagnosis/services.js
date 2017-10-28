@@ -8,15 +8,13 @@ Description: Services for Diagnosis module
 angular.module('Diagnosis')
  
 .factory('DiagnosisService',
-    ['$timeout', '$filter', '$http', '$q',
-    function ($timeout, $filter, $http, $q) {
+    ['$timeout', '$filter', '$http', '$q', 'UtilityService',
+    function ($timeout, $filter, $http, $q, UtilityService) {
 
         //console.log('Inside function DiagnosisService DiagnosisService-services.js');
         
         var service = {};
-		//var BaseAPIUrl = "";
-        //var BaseAPIUrl = "http://localhost:8080";
-        var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
+		var BaseAPIUrl = UtilityService.BaseAPIUrl;
 
 
 

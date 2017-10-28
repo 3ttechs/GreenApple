@@ -103,7 +103,7 @@ angular.module('BookConsultation')
 								UtilityService.user_setDoctorSessions(null, usrType);
 							
 								//$scope.cue = "Success!!!!!! Consultation booked";
-								$scope.cue = "Done, Slot : " + slotNO + ", Time : " + appointmentTimeStr;
+								$scope.cue = "Success!!!!!! Consultation booked. Sl.Number : " + slotNO + "...Appointment Time : " + appointmentTimeStr;
 								$scope.error = "";
 								$scope.dataLoading = false;
 								$scope.disableSubmit = true;

@@ -9,21 +9,19 @@ console.log('From authentication-services.js');
 angular.module('Authentication')
  
 .factory('AuthenticationService',
-    ['Base64', '$http', '$q', '$cookieStore', '$rootScope', '$timeout',
-    function (Base64, $http, $q, $cookieStore, $rootScope, $timeout) {
+    ['Base64', '$http', '$q', '$cookieStore', '$rootScope', '$timeout', 'UtilityService',
+    function (Base64, $http, $q, $cookieStore, $rootScope, $timeout, UtilityService) {
         
         var service = {};
-		//var BaseAPIUrl = "";
-        //var BaseAPIUrl = "http://localhost:8080";
-        var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
+		var BaseAPIUrl = UtilityService.BaseAPIUrl;
 
         service.Login = function (username, password, usrtype) {
             var def = $q.defer();
             //console.log('Inside service.Login()...'); 
-            
+            alert(Base64.encode(password));
             $http({
                 method: 'GET',
-				url: BaseAPIUrl+'/AdminUser/Login/' + username + ',' + password + ',' + usrtype,
+                url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + Base64.encode(password) + ',' + usrtype,
                 dataType: 'json',
                 headers: {'Content-Type': 'application/json; charset=UTF-8'},
 				 params: {}

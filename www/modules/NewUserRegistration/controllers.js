@@ -21,7 +21,7 @@ angular.module('NewUserRegistration')
 		$scope.verifyLabel = "Verify";
 		
 		//$scope.cue2 = "Please verify if the user exists. Enter User Name & Doctor ID";
-		$scope.cue2 = "";
+		$scope.cue2 = "Enter User Name & Doctor ID and check Verify";
 		
 		$scope.menuItemClick = function (url) {
             
@@ -158,7 +158,7 @@ angular.module('NewUserRegistration')
 									
 								//alert("Success!!!!!! You will directed to the login page");
 								//$scope.cue = "Success!!!!!! You will directed to the login page";
-								$scope.cue = "Done";
+								$scope.cue = "Success!!!!!! New user created";
 								$scope.error = "";
 								$scope.dataLoading = false;
 								$scope.disableSubmit = true;

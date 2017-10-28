@@ -443,7 +443,7 @@ angular.module('Diagnosis')
 						$scope.selectedSlot.Status = selectedSlotStatus;
 						updateSelSlotStatus(slot, selectedSlotStatus);
 												
-						$scope.cue = "Done";
+						$scope.cue = "Success!!!!!! Slot updated";
 						$scope.error = "";
 						
 						setReqReloadOfSelSessionFlag(true);
@@ -529,7 +529,7 @@ angular.module('Diagnosis')
 						if(responseData === true)
 						{
 							//alert("Success!!!!!! Diagnosis created");
-							$scope.cue = "Done";
+							$scope.cue = "Success!!!!!! Diagnosis created";
 							$scope.error = "";
 							
 							//Disable diagnosis fields in view
@@ -596,7 +596,7 @@ angular.module('Diagnosis')
 						if(responseData === true)
 						{
 							//alert("Success!!!!!! Diagnosis updated");
-							$scope.cue = "Done";
+							$scope.cue = "Success!!!!!! Diagnosis updated";
 							$scope.error = "";
 							
 							//Disable diagnosis fields in view
@@ -998,8 +998,7 @@ angular.module('Diagnosis')
 				$scope.patient = patient;
 				
 				$scope.patient.SexStr = getSexStr($scope.patient.Sex);
-				$scope.patientDetails = ", " + $scope.patient.PatName + 
-										", " + $scope.patient.UsrAddress + 
+				$scope.patientDetails = ", " + $scope.patient.UsrAddress + 
 										", " + $scope.patient.SexStr + 
 										", " + $scope.patient.Age + " Years" + 
 										", " + patient.DateOfBirth;
@@ -1091,22 +1090,22 @@ angular.module('Diagnosis')
 			//Note : This block has to be modified later.
 			if(usrType === 'D')
 			{
-				$scope.slotStatuses = [{name: 'Booked', disableFlag: false}, 
-									   {name: 'Cancelled', disableFlag: false}, 
-									   {name: 'Arrived', disableFlag: false}, 
-									   {name: 'Next', disableFlag: false}, 
-									   {name: 'Consulted', disableFlag: false}, 
-									   {name: 'Diagnosed', disableFlag: false}
+				$scope.slotStatuses = [{name: 'booked', disableFlag: true}, 
+									   {name: 'cancelled', disableFlag: true}, 
+									   {name: 'arrived', disableFlag: true}, 
+									   {name: 'next', disableFlag: true}, 
+									   {name: 'consulted', disableFlag: false}, 
+									   {name: 'diagnosed', disableFlag: false}
 									  ];
 			}
 			else if(usrType === 'S')
 			{
-				$scope.slotStatuses = [{name: 'Booked', disableFlag: true}, 
-									   {name: 'Cancelled', disableFlag: true}, 
-									   {name: 'Arrived', disableFlag: true}, 
-									   {name: 'Next', disableFlag: true}, 
-									   {name: 'Consulted', disableFlag: false}, 
-									   {name: 'Diagnosed', disableFlag: true}
+				$scope.slotStatuses = [{name: 'booked', disableFlag: true}, 
+									   {name: 'cancelled', disableFlag: true}, 
+									   {name: 'arrived', disableFlag: true}, 
+									   {name: 'next', disableFlag: true}, 
+									   {name: 'consulted', disableFlag: false}, 
+									   {name: 'diagnosed', disableFlag: true}
 									  ];
 			}
 			else 

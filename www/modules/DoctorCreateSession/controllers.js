@@ -146,23 +146,27 @@ angular.module('DoctorCreateSession')
 			sesStartTime.setHours(getHours($scope.selectedStartTime));
 			sesStartTime.setMinutes(getMinutes($scope.selectedStartTime));
 			
-			
 			sesEndTime.setHours(getHours($scope.selectedEndTime));
-			sesEndTime.setMinutes(getMinutes($scope.selectedEndTime));
+            sesEndTime.setMinutes(getMinutes($scope.selectedEndTime));
 
-			sesStartTime.setTime( sesStartTime.getTime() - sesStartTime.getTimezoneOffset()*60*1000 );
-			sesEndTime.setTime( sesEndTime.getTime()  - sesEndTime.getTimezoneOffset()*60*1000 );
-			
-								
+            
+
 			var newSession = {DocID : $scope.docID, LocID : $scope.selectedLocation.LocID, MaxSlot : $scope.selectedMaxSlotNum,
 							  AvailableSlot : $scope.selectedMaxSlotNum, SessionStart : sesStartTime, SessionEnd : sesEndTime};
-							 
+
+            alert(sesStartTime);
+            alert(sesEndTime);
+            alert($scope.selectedStartTime);
+            alert($scope.selectedEndTime);
+
+           
 			$scope.dataLoading = true;
 			DoctorCreateSessionService.DoctorUser_createSession(newSession)
             .then(function (response) {
 				var statusInt = parseInt(response.status);
 				//console.log("statusInt : " + statusInt);
-                
+               
+              
 				//if(statusInt == 200 || statusInt == 201) {
 				if(statusInt == 200) {
 					//var respData = angular.toJson(response.data);
@@ -175,7 +179,7 @@ angular.module('DoctorCreateSession')
 						//Flush out all the sessions by setting to null
 						UtilityService.user_setDoctorSessions(null, 'D');
 						//$scope.cue = "Success!!!!!! Session created. You will directed to the Doctor-Home page";
-						$scope.cue = "Done";
+						$scope.cue = "Success!!!!!! Session created.";
 						$scope.error = "";
 						$scope.dataLoading = false;
 						$scope.disableSubmit = true;
@@ -266,7 +270,7 @@ angular.module('DoctorCreateSession')
 			var ispastdate = true;
 			var compSesStartAndCurTimeValid = false;
 			var compSesStartAndEndTimeValid = false;
-			var isSesDurBtwnMinAndMaxLt = false;			
+			var isSesDurBtwnMinAndMaxLt = false;
 			var isSessionMoreThan8Hrs = true;
 			
 			var maxSlot = $scope.selectedMaxSlotNum;
@@ -313,14 +317,13 @@ angular.module('DoctorCreateSession')
 			
 			if(isValid)
 			{
-				//isSesDurBtwnMinAndMaxLt = validateSesDurBtwnMinAndMaxLt(sesStartTime, sesEndTime, 10, 30, maxSlot);
-				isSesDurBtwnMinAndMaxLt = true; // Hardcoded as of now by lakshmy on 9th Jun 2017
-				
+				isSesDurBtwnMinAndMaxLt = validateSesDurBtwnMinAndMaxLt(sesStartTime, sesEndTime, 10, 30, maxSlot);
 				if(!isSesDurBtwnMinAndMaxLt)
 				{
 					 //alert("Session duration should be within limits (more than 10mins per patient and less than 30mins per patient)");
 					 $scope.error = "Session duration should be within limits (more than 10mins per patient and less than 30mins per patient)";
 				}
+				
 				isValid = maxSlotValid && (!ispastdate) && compSesStartAndCurTimeValid && compSesStartAndEndTimeValid && isSesDurBtwnMinAndMaxLt;
 			}
 			

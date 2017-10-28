@@ -143,7 +143,7 @@ angular.module('ListSessions')
 						//Flush out all the sessions by setting to null
 						UtilityService.user_setDoctorSessions(null, 'D');
 						
-						$scope.cue = "Done";
+						$scope.cue = "Success!!!!!! Session deleted";
 						$scope.error = "";
 						UtilityService.doctorUser_setSessionDeletionFlag(true);
 						$route.reload();	//Reload the page

@@ -8,15 +8,13 @@ console.log('From DoctorSelection-services.js');
 angular.module('DoctorSelection')
  
 .factory('DoctorSelectionService',
-    ['$timeout', '$filter', '$http', '$q',
-    function ($timeout, $filter, $http, $q) {
+    ['$timeout', '$filter', '$http', '$q', 'UtilityService',
+    function ($timeout, $filter, $http, $q, UtilityService) {
 
         //console.log('Inside function DoctorSelectionService DoctorSelection-services.js');
         
         var service = {};
-		//var BaseAPIUrl = "";
-        //var BaseAPIUrl = "http://localhost:8080";
-        var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
+		var BaseAPIUrl = UtilityService.BaseAPIUrl;
 
 
 

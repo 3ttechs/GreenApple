@@ -181,6 +181,12 @@ angular.module('Dashboard')
 		//Global variables used : UtilityService.doctorUser
 		var initVariables = function()
         {
+			
+			for (var i = 0; i < 24; i++) {	 
+				$scope.p_colortype[i] = 'white_person';
+				$scope.p_name[i] = '-';
+			}
+			
 			if(usrType === 'D')
 			{
 				doctorUser = UtilityService.doctorUser;

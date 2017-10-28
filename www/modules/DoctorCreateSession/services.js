@@ -8,15 +8,13 @@ Description: Services for DoctorCreateSession module
 angular.module('DoctorCreateSession')
  
 .factory('DoctorCreateSessionService',
-    ['$timeout', '$filter', '$http', '$q',
-    function ($timeout, $filter, $http, $q) {
+    ['$timeout', '$filter', '$http', '$q', 'UtilityService',
+    function ($timeout, $filter, $http, $q, UtilityService) {
 
         //console.log('Inside function DoctorCreateSessionService DoctorCreateSession-services.js');
         
         var service = {};
-		//var BaseAPIUrl = "";
-        //var BaseAPIUrl = "http://localhost:8080";
-        var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
+		var BaseAPIUrl = UtilityService.BaseAPIUrl;
 
 
 
@@ -36,9 +34,9 @@ angular.module('DoctorCreateSession')
                 data: newSession,
                 })
                 .success(function (data, status, headers, config) {
-                    //console.log("success");
                     var results = {};
                     results.data = data;
+                    console.log(data);
                     results.headers = headers();
                     results.status = status;
                     results.config = config;

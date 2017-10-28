@@ -269,7 +269,7 @@ angular.module('ListPatients')
 						updateSelSlotStatus(patientSlot, selectedSlotStatus);
 						$scope.patientSlots[index].Status = selectedSlotStatus;	
 						
-						$scope.cue = "Done";
+						$scope.cue = "Success!!!!!! Slot updated";
 						$scope.error = "";
 					}
 					else
@@ -342,7 +342,7 @@ angular.module('ListPatients')
 						UtilityService.doctorUser_setSelectedSlotPatient(null);
 						UtilityService.user_setSelectedSlot(null, $scope.UsrType);
 						
-						$scope.cue = "Done";
+						$scope.cue = "Success!!!!!! Slot deleted";
 						$scope.error = "";
 						UtilityService.doctorUser_setReqReloadOfSelSessionFlag(true);
 					

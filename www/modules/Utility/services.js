@@ -11,15 +11,8 @@ angular.module('Utility')
     ['$timeout', '$filter', '$http', '$q',
     function ($timeout, $filter, $http, $q) {
 	
-		//console.log('Inside function UtilityService Utility-services.js');
-        
         var service = {};
-		//var BaseAPIUrl = "";
-        //var BaseAPIUrl = "http://localhost:8080";
         var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
-
-
-
 		
 		service.setDoctorUser = setDoctorUser;
 		service.doctorUser_setSessions = doctorUser_setSessions;
