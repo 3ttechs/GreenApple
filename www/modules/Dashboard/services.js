@@ -15,7 +15,8 @@ angular.module('Dashboard')
         //alert("inSideService");
         var service = {};
        
-        var BaseAPIUrl = UtilityService.BaseAPIUrl;
+		//var BaseAPIUrl = UtilityService.BaseAPIUrl;
+		var BaseAPIUrl = "http://ec2-18-221-0-251.us-east-2.compute.amazonaws.com/SmartClinicWebApi"
 
 
 

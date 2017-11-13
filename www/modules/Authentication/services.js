@@ -13,15 +13,17 @@ angular.module('Authentication')
     function (Base64, $http, $q, $cookieStore, $rootScope, $timeout, UtilityService) {
         
         var service = {};
-		var BaseAPIUrl = UtilityService.BaseAPIUrl;
+		var BaseAPIUrl = "http://ec2-18-221-0-251.us-east-2.compute.amazonaws.com/SmartClinicWebApi"
+		//var BaseAPIUrl = UtilityService.BaseAPIUrl;
 
         service.Login = function (username, password, usrtype) {
             var def = $q.defer();
             //console.log('Inside service.Login()...'); 
-            alert(Base64.encode(password));
+            //alert(Base64.encode(password));
             $http({
                 method: 'GET',
-                url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + Base64.encode(password) + ',' + usrtype,
+                //url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + Base64.encode(password) + ',' + usrtype,
+                url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + password + ',' + usrtype,
                 dataType: 'json',
                 headers: {'Content-Type': 'application/json; charset=UTF-8'},
 				 params: {}
@@ -49,8 +51,8 @@ angular.module('Authentication')
         
         service.SetCredentialsAndUserInfo = function (currentUser) {
             
-            var authdata = Base64.encode(currentUser.usrName + ':' + currentUser.UsrPwd);
-            
+            //var authdata = Base64.encode(currentUser.usrName + ':' + currentUser.UsrPwd);
+             var authdata = currentUser.usrName; //+ ':' + currentUser.UsrPwd;
             $rootScope.globals = {
                 currentUser: currentUser
             };

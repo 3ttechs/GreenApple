@@ -12,8 +12,10 @@ angular.module('NewUserRegistration')
     function ($timeout, $filter, $http, $q, UtilityService) {
 
         var service = {};
-		var BaseAPIUrl = UtilityService.BaseAPIUrl;
-        
+		//var BaseAPIUrl = UtilityService.BaseAPIUrl;
+		var BaseAPIUrl = "http://ec2-18-221-0-251.us-east-2.compute.amazonaws.com/SmartClinicWebApi"
+ 
+       
         service.GetAll = GetAll;
         service.GetById = GetById;
         service.GetByUsername = GetByUsername;

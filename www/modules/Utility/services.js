@@ -12,8 +12,7 @@ angular.module('Utility')
     function ($timeout, $filter, $http, $q) {
 	
         var service = {};
-        var BaseAPIUrl = "http://ec2-13-126-5-195.ap-south-1.compute.amazonaws.com/SmartClinicWebApi";
-		
+		var BaseAPIUrl = "http://ec2-18-221-0-251.us-east-2.compute.amazonaws.com/SmartClinicWebApi"
 		service.setDoctorUser = setDoctorUser;
 		service.doctorUser_setSessions = doctorUser_setSessions;
 		service.doctorUser_setPatients = doctorUser_setPatients;

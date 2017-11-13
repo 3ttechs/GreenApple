@@ -14,7 +14,8 @@ angular.module('DoctorCreateSession')
         //console.log('Inside function DoctorCreateSessionService DoctorCreateSession-services.js');
         
         var service = {};
-		var BaseAPIUrl = UtilityService.BaseAPIUrl;
+		//var BaseAPIUrl = UtilityService.BaseAPIUrl;
+		var BaseAPIUrl = "http://ec2-18-221-0-251.us-east-2.compute.amazonaws.com/SmartClinicWebApi"
 
 
 

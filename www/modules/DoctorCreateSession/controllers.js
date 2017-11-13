@@ -149,15 +149,18 @@ angular.module('DoctorCreateSession')
 			sesEndTime.setHours(getHours($scope.selectedEndTime));
             sesEndTime.setMinutes(getMinutes($scope.selectedEndTime));
 
+			sesStartTime.setTime( sesStartTime.getTime() - sesStartTime.getTimezoneOffset()*60*1000 );
+			sesEndTime.setTime( sesEndTime.getTime()  - sesEndTime.getTimezoneOffset()*60*1000 );
+						
             
 
 			var newSession = {DocID : $scope.docID, LocID : $scope.selectedLocation.LocID, MaxSlot : $scope.selectedMaxSlotNum,
 							  AvailableSlot : $scope.selectedMaxSlotNum, SessionStart : sesStartTime, SessionEnd : sesEndTime};
-
-            alert(sesStartTime);
-            alert(sesEndTime);
-            alert($scope.selectedStartTime);
-            alert($scope.selectedEndTime);
+	
+            //alert(sesStartTime);
+            //alert(sesEndTime);
+            //alert($scope.selectedStartTime);
+            //alert($scope.selectedEndTime);
 
            
 			$scope.dataLoading = true;

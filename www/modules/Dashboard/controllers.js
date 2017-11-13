@@ -184,7 +184,7 @@ angular.module('Dashboard')
 			
 			for (var i = 0; i < 24; i++) {	 
 				$scope.p_colortype[i] = 'white_person';
-				$scope.p_name[i] = '-';
+				$scope.p_name[i] = ' ';
 			}
 			
 			if(usrType === 'D')

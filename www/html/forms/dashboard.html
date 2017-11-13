@@ -34,7 +34,7 @@
                             <i class="fa fa-bars icon"></i>
                         </button>
                         <ol class="breadcrumb navbar-breadcrumb">
-                            <li class="active">Fathima Hospital</li>
+                            <li class="active"></li>
                         </ol>
                         <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                             <i class="fa fa-th icon"></i>
@@ -110,7 +110,6 @@
 						</form>
 			
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card red summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-inbox fa-4x"></i>
@@ -121,10 +120,8 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card yellow summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-comments fa-4x"></i>
@@ -135,10 +132,8 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card green summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-tags fa-4x"></i>
@@ -149,10 +144,8 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card blue summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-share-alt fa-4x"></i>
@@ -163,7 +156,6 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
 						
 						<!--
@@ -227,17 +219,18 @@
                             </a>
                         </div>                    
 						-->
-						<!--
+						
 						<div>
 							<button ng-click="refreshQueueBtnClick()">Refresh Queue</button>
 							<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
 						</div>
-						-->
+						
+						<!--
 						<div>
 							<center><a ng-click="refreshQueueBtnClick()"><span class ="fa fa-refresh fa-spin fa-2x fa-fw"></span></a></center>
 							<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
 						</div>
-						
+						-->
 						<br>
 						
 						
