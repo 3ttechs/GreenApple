@@ -28,7 +28,7 @@ angular.module('Dashboard')
 		    //alert(BaseAPIUrl + '/Dashboard/GetDashboardParams/' + DocID);
             var def = $q.defer();
             //console.log('Inside service.GetDiagnosis()...'); 
-            debugger;
+    
             $http({
                 method: 'GET',
                 url: BaseAPIUrl+'/Dashboard/GetDashboardParams/' + DocID,

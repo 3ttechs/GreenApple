@@ -18,12 +18,14 @@ angular.module('Authentication')
 
         service.Login = function (username, password, usrtype) {
             var def = $q.defer();
+			//	var BaseAPIUrl = "http://ec2-18-221-0-251.us-east-2.compute.amazonaws.com/SmartClinicWebApi"
             //console.log('Inside service.Login()...'); 
-            //alert(Base64.encode(password));
+            //alert(BaseAPIUrl + '/AdminUser/Login/' + username + ',' + Base64.encode(password) + ',' + usrtype);
+			
             $http({
                 method: 'GET',
-                //url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + Base64.encode(password) + ',' + usrtype,
-                url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + password + ',' + usrtype,
+                url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + Base64.encode(password) + ',' + usrtype,
+                //url: BaseAPIUrl + '/AdminUser/Login/' + username + ',' + password + ',' + usrtype,
                 dataType: 'json',
                 headers: {'Content-Type': 'application/json; charset=UTF-8'},
 				 params: {}
@@ -52,13 +54,13 @@ angular.module('Authentication')
         service.SetCredentialsAndUserInfo = function (currentUser) {
             
             //var authdata = Base64.encode(currentUser.usrName + ':' + currentUser.UsrPwd);
-             var authdata = currentUser.usrName; //+ ':' + currentUser.UsrPwd;
+            var authdata = currentUser.usrName; //+ ':' + currentUser.UsrPwd;
             $rootScope.globals = {
                 currentUser: currentUser
             };
             
             //console.log('$rootScope.globals.currentUser.UsrID : ' + $rootScope.globals.currentUser.UsrID);
-            //console.log('$rootScope.globals.currentUser.DocID : ' + $rootScope.globals.currentUser.DocID);
+            //console.log('$rootScope.globals.currentUser.DocID : ' + $rootScope globals.currentUser.DocID);
             
             $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata; // jshint ignore:line
             $cookieStore.put('globals', $rootScope.globals);
