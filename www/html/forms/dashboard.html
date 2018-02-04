@@ -34,7 +34,7 @@
                             <i class="fa fa-bars icon"></i>
                         </button>
                         <ol class="breadcrumb navbar-breadcrumb">
-                            <li class="active">Smart Clinic Dashboard</li>
+                            <li class="active"></li>
                         </ol>
                         <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
                             <i class="fa fa-th icon"></i>
@@ -72,7 +72,7 @@
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="side-menu-container">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">
+                            <a class="navbar-brand">
                                 <div class="icon fa fa-paper-plane"></div>
                                 <div class="title">Smart Clinic</div>
                             </a>
@@ -81,77 +81,18 @@
                             </button>
                         </div>
                         <ul class="nav navbar-nav">
-							<!--
-							<li>
-                                <a href="#/landing">
-                                    <span class="icon fa fa-tachometer"></span><span class="title">Landing Page</span>
-                                </a>
-                            </li>
-							-->
-							
-							<li>
-								<a href="#/login">
-                                    <span class="icon fa fa-thumbs-o-up"></span><span class="title">Login</span>
-                                </a>
-                            </li>
-							
-							<li class="active">
-                                <a href="#/dashboard">
-                                    <span class="icon fa fa-tachometer"></span><span class="title">Smart Clinic Dashboard</span>
-                                </a>
-                            </li>
-							
-							<div ng-if="UsrType==='D'">
-							<li class="panel panel-default dropdown">
-								<a data-toggle="collapse" data-target="#doctorMenu">
-                                    <span class="icon fa fa-desktop"></span><span class="title">Doctor</span>
-                                </a>
-								<div id="doctorMenu" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul class="nav navbar-nav">
-											<li><a ng-click="menuItemClick('/listSessions')" style="cursor:pointer">List Sessions</a> </li>
-											<li><a ng-click="menuItemClick('/listPatients')" style="cursor:pointer">List Patients</a> </li>
-											<li><a ng-click="menuItemClick('/diagnosis')" style="cursor:pointer">Diagnosis</a> </li>
-                                            <li><a ng-click="menuItemClick('/doctorCreateSession')" style="cursor:pointer">Create New Session</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-							</div>
-							
-							<div ng-if="UsrType==='D' || UsrType==='S'">
-							<li class="panel panel-default dropdown">
-                                <a data-toggle="collapse" data-target="#staffMenu">
-                                    <span class="icon fa fa-slack"></span><span class="title">Staff</span>
-                                </a>
-                                <div id="staffMenu" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul class="nav navbar-nav">
-											<li><a ng-click="menuItemClick('/listPatients')" style="cursor:pointer"
-											       ng-class="(UsrType==='S') ? '' : 'hidden'">List Patients</a> </li>
-											<li><a href="#/newUserRegistration">New Patient Registration</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-							</div>
-
-							<li class="panel panel-default dropdown">
-                                <a data-toggle="collapse" data-target="#patientMenu">
-                                    <span class="icon fa fa-cubes"></span><span class="title">Patient</span>
-                                </a>
-                                <div id="patientMenu" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul class="nav navbar-nav">
-											<li><a ng-click="menuItemClick('/bookConsultation')" style="cursor:pointer">Book Consultation</a> </li>
-											<li><a ng-click="menuItemClick('/diagnosis')" style="cursor:pointer" 
-												   ng-class="(UsrType==='N') ? '' : 'hidden'">Diagnosis</a>
-											</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-							
+																					
+							<ul class="nav navbar-nav">
+								<li><a href="#/dashboard"><span class="icon fa fa-tachometer"></span><span class="title">Dashboard</span></a></li>
+								<li><a href="#/newUserRegistration"><span class="icon fa fa-desktop"></span><span class="title">Register Patient</span></a></li>
+								<li><a href="#/doctorCreateSession"><span class="icon fa fa-calendar"></span><span class="title">Create Session</span></a></li>
+								<li><a href="#/bookConsultation"><span class="icon fa fa-calendar-o"></span><span class="title">Book Consultation</span></a></li>
+								<li><a href="#/listSessions"><span class="icon fa fa-cubes"></span><span class="title">List Sessions</span></a></li>
+								<li><a href="#/listPatients"><span class="icon fa fa-list-alt"></span><span class="title">List Patients</span></a></li>
+								<li><a href="#/diagnosis"><span class="icon fa fa-search"></span><span class="title">Diagnosis</span></a></li>
+								
+							</ul>
+						
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -169,7 +110,6 @@
 						</form>
 			
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card red summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-inbox fa-4x"></i>
@@ -180,10 +120,8 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card yellow summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-comments fa-4x"></i>
@@ -194,10 +132,8 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card green summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-tags fa-4x"></i>
@@ -208,10 +144,8 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                            <a href="#">
                                 <div class="card blue summary-inline">
                                     <div class="card-body">
                                         <i class="icon fa fa-share-alt fa-4x"></i>
@@ -222,13 +156,81 @@
                                         <div class="clear-both"></div>
                                     </div>
                                 </div>
+                        </div>
+						
+						<!--
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <a href="#">
+                                <div class="card blue summary-inline">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-share-alt fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">16</div>
+                                            <div class="sub-title">Sessions This Month</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                    </div>
+                                </div>
                             </a>
                         </div>
+						
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <a href="#">
+                                <div class="card blue summary-inline">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-share-alt fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">16</div>
+                                            <div class="sub-title">Sessions This Month</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <a href="#">
+                                <div class="card blue summary-inline">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-share-alt fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">16</div>
+                                            <div class="sub-title">Sessions This Month</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+						
+						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <a href="#">
+                                <div class="card blue summary-inline">
+                                    <div class="card-body">
+                                        <i class="icon fa fa-share-alt fa-4x"></i>
+                                        <div class="content">
+                                            <div class="title">16</div>
+                                            <div class="sub-title">Sessions This Month</div>
+                                        </div>
+                                        <div class="clear-both"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                    
+						-->
 						
 						<div>
 							<button ng-click="refreshQueueBtnClick()">Refresh Queue</button>
 							<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
 						</div>
+						
+						<!--
+						<div>
+							<center><a ng-click="refreshQueueBtnClick()"><span class ="fa fa-refresh fa-spin fa-2x fa-fw"></span></a></center>
+							<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+						</div>
+						-->
 						<br>
 						
 						<div ng-repeat="p in p_name track by $index">
@@ -249,23 +251,18 @@
 							</table>
 						</div>
 						</div>
-					
+						
+						
 						<!--
-						<div class="row example">
-							<div class="col-xs-3 col-sm-2 col-md-1">
-								<table>
-								<tr>
-									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[0]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+						<div class="row example"">
+							<div class="col-xs-3 col-sm-2 col-md-1" >
+								<table border="0" >
+								<tr >
+									<td style="text-align: center;" > 
+										<img src='img/thumbnails/{{p_colortype[0]}}.png' >
 										<p>{{p_name[0]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -273,16 +270,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[1]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[1]}}.png' >
 										<p>{{p_name[1]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -290,18 +281,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[2]}}.png' height='100' width='80'>
-										
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[2]}}.png' >
 										<p>{{p_name[2]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -309,18 +292,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[3]}}.png' height='100' width='80'>
-										
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[3]}}.png' >
 										<p>{{p_name[3]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -328,16 +303,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[4]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[4]}}.png' >
 										<p>{{p_name[4]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -345,17 +314,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[5]}}.png' height='100' width='80'>
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[5]}}.png' >
 										<p>{{p_name[5]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -363,17 +325,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[6]}}.png' height='100' width='80'>
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[6]}}.png' >
 										<p>{{p_name[6]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -381,16 +336,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[7]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[7]}}.png' >
 										<p>{{p_name[7]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -398,16 +347,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[8]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[8]}}.png' >
 										<p>{{p_name[8]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -415,16 +358,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[9]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[9]}}.png' >
 										<p>{{p_name[9]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -432,16 +369,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[10]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[10]}}.png' >
 										<p>{{p_name[10]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -449,17 +380,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[11]}}.png' height='100' width='80'>
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[11]}}.png' >
 										<p>{{p_name[11]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -467,16 +391,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[12]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[12]}}.png' >
 										<p>{{p_name[12]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -484,16 +402,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[13]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[13]}}.png' >
 										<p>{{p_name[13]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -501,16 +413,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[14]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[14]}}.png' >
 										<p>{{p_name[14]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -518,16 +424,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[15]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[15]}}.png' >
 										<p>{{p_name[15]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -535,16 +435,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[16]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[16]}}.png' >
 										<p>{{p_name[16]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -552,17 +446,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[17]}}.png' height='100' width='80'>
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[17]}}.png' >
 										<p>{{p_name[17]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -570,17 +457,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[18]}}.png' height='100' width='80'>
-										
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[18]}}.png' >
 										<p>{{p_name[18]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -588,16 +468,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[19]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[19]}}.png' >
 										<p>{{p_name[19]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -605,16 +479,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[20]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[20]}}.png' >
 										<p>{{p_name[20]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -622,16 +490,10 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[21]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[21]}}.png' >
 										<p>{{p_name[21]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
@@ -639,39 +501,30 @@
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[22]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[22]}}.png' >
 										<p>{{p_name[22]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
 							
+
 							<div class="col-xs-3 col-sm-2 col-md-1">
 								<table>
 								<tr>
 									<td style="text-align: center;"> 
-										<img src='img/thumbnails/{{p_colortype[23]}}.png' height='100' width='80'>
-									</td>
-								</tr>
-								
-								<tr>
-									<td style="text-align: center;"> 
+										<img src='img/thumbnails/{{p_colortype[23]}}.png' >
 										<p>{{p_name[23]}}</p>
 									</td>
 								</tr>
-								
 								</table>
 							</div>
+
+-->
+
+
 							
 						</div>
-						-->
-						
 						
 					</div>
 				
