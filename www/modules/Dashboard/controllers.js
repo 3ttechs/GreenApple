@@ -26,10 +26,10 @@ angular.module('Dashboard')
 	   $scope.p_name = [];
 	   $scope.p_status = [];
 
-       //$scope.patientBookedToday = 0;
-       //$scope.patientArrivedToday = 0;
-       //$scope.patientSessionsToday = 0;
-       //$scope.patientSessionsThisMonth = 0;
+       $scope.patientBookedToday = 0;
+       $scope.patientArrivedToday = 0;
+       $scope.patientSessionsToday = 0;
+       $scope.patientSessionsThisMonth = 0;
 	   
        $scope.menuItemClick = function (url) {
            $location.path(url);
@@ -69,22 +69,13 @@ angular.module('Dashboard')
 						var statusInt = parseInt(response.status);
 						//console.log('statusInt : ' + statusInt);
 						if(statusInt == 200) {
-						    //var respData = angular.toJson(response.data);
-
+							//var respData = angular.toJson(response.data);
 							//console.log(respData);
-						    var responseData = response.data;
-						   // alert(respData);
-						    //$scope.patientBookedToday = responseData.NumPatientsBookedToday[0];
-						    //$scope.patientArrivedToday = 2;
-						    //$scope.patientSessionsToday = 3;
-						    //$scope.patientSessionsThisMonth = 4;
-
-						    $scope.patientBookedToday = responseData[0].NumPatientsBookedToday;
-						    $scope.patientArrivedToday = responseData[0].NumPatientsArrivedToday;
-						    $scope.patientSessionsToday = responseData[0].NumSessionsToday;
-						    $scope.patientSessionsThisMonth = responseData[0].NumSessionsThisMonth;
-						    //alert(respData.NumPatientsBookedToday);
-							//alert($scope.patientBookedToday);
+							var responseData = response.data;
+							$scope.patientBookedToday = responseData.NumPatientsToday;
+							$scope.patientArrivedToday = responseData.NumPatientsArrivedToday;
+							$scope.patientSessionsToday = responseData.NumSessionsToday;
+							$scope.patientSessionsThisMonth = responseData.NumSessionsThisMonth;
 							$scope.dataLoading = false;
 						} else {
 							$scope.error = 'Error...'; 
@@ -118,8 +109,8 @@ angular.module('Dashboard')
                .then(function (response) {
                    var statusInt = parseInt(response.status);
                    if (statusInt == 200) {
-                       //var respData = angular.toJson(response.data);
-					   //console.log(respData);
+                       var respData = angular.toJson(response.data);
+					   console.log(respData);
 
 						var responseQueueData = response.data;
                         if (responseQueueData.length > 0) {
@@ -181,11 +172,15 @@ angular.module('Dashboard')
 		//Global variables used : UtilityService.doctorUser
 		var initVariables = function()
         {
-			
+			/*
 			for (var i = 0; i < 24; i++) {	 
 				$scope.p_colortype[i] = 'white_person';
-				$scope.p_name[i] = ' ';
+				$scope.p_name[i] = '-';
 			}
+			*/
+			//Initialize the 0th element alone
+			$scope.p_colortype[0] = 'white_person';
+			$scope.p_name[0] = '-';
 			
 			if(usrType === 'D')
 			{
